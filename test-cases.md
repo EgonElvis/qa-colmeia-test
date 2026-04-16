@@ -2,63 +2,75 @@
 
 ---
 
-## 🔹 TC001 - Nome do teste
+## 🔹 TC001 - Validação de clique no logo
 
-**Descrição:** Informações  
+**Descrição:** Validar se o logo redireciona corretamente 
 
-**Pré-condição:** sim ou não  
+**Pré-condição:** Não  
 
 **Passos:**
-1. a
-2. b
-3. c 
-4. d  
+1. Acessar sistema
+2. Clicar no logo
 
 **Resultado esperado:**  
-123
+Redirecionar para home/dashboard
 
 **Resultado obtido:**  
-123
+Não redireciona
 
 ---
 
-## 🔹 TC002 - Nome do teste
+## 🔹 TC002 - Funcionamento do menu do usuário
 
-**Descrição:** Informações  
+**Descrição:** Validar menu do usuário  
 
-**Pré-condição:** sim ou não  
+**Pré-condição:** Não  
 
 **Passos:**
-1. a
-2. b
-3. c 
-4. d  
+1. Logar no sistema
+2. Clicar em "Candidato" no canto superior direito
 
 **Resultado esperado:**  
-123
+Exibir opções de usuário
 
 **Resultado obtido:**  
-123
+Nenhuma ação ocorre
 
 ---
 
-## 🔹 TC003 - Nome do teste
+## 🔹 TC003 - Navegação via menu lateral
 
-**Descrição:** Informações  
+**Descrição:** Validar acesso ao menu  
 
-**Pré-condição:** sim ou não  
+**Pré-condição:** Não  
 
 **Passos:**
-1. a
-2. b
-3. c 
-4. d  
+1. Clicar no botão lateral
+2. Visualizar opções  
 
 **Resultado esperado:**  
-123
+Menu claro e acessível 
 
 **Resultado obtido:**  
-123
+Ícone pouco intuitivo
+
+---
+
+## 🔹 TC004 - Acesso à opção Colmeia Forms
+
+**Descrição:** Validar navegação para formulário  
+
+**Pré-condição:** Não  
+
+**Passos:**
+1. Abrir menu campanha (Megafone)
+2. Clicar em "Colmeia Forms" 
+
+**Resultado esperado:**  
+Redirecionar corretamente
+
+**Resultado obtido:**  
+Não navega (não mostra nada)
 
 ---
 
