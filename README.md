@@ -78,9 +78,9 @@ npx cypress open
 
 A automação foi aplicada apenas nos fluxos mais críticos do sistema, priorizando:
 
-Funcionalidades essenciais
-Cenários de maior risco
-Validações importantes de negócio
+- Funcionalidades essenciais
+- Cenários de maior risco
+- Validações importantes de negócio
 
 Os testes foram organizados para facilitar manutenção, leitura e escalabilidade.
 
@@ -89,3 +89,5 @@ Os testes foram organizados para facilitar manutenção, leitura e escalabilidad
 ## 👨‍💻 Autor
 
 Egon Elvis Jorge
+
+QA Automation Analyst
