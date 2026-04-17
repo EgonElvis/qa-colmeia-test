@@ -94,4 +94,4 @@ Os testes foram organizados para facilitar manutenção, leitura e escalabilidad
 
 Egon Elvis Jorge
 
-QA Automation Analyst
+Analista de QA / QA Automation
