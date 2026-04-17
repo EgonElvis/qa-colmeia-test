@@ -19,14 +19,31 @@ Foram utilizadas as seguintes estratégias:
 - Testes de validação de formulário
 - Testes de usabilidade (UX)
 - Testes de comportamento de interface (modais, botões e navegação)
+- Automação de cenários de teste com Cypress
 
 ---
 
 ## 📂 Estrutura do Repositório
 
-- `test-cases.md` → Casos de teste executados  
+qa-colmeia-test
+├── docs/
+│   ├── bugs.md
+│   ├── exploratory-notes.md
+│   └── test-cases.md
+├── cypress/
+│   └── e2e/
+│       ├── login.cy.js
+│       └── bancos-dados.cy.js
+├── cypress.config.js
+├── package.json
+├── package-lock.json
+├── README.md
+
 - `bugs.md` → Bugs identificados durante a análise  
-- `exploratory-notes.md` → Registro da abordagem exploratória e insights  
+- `exploratory-notes.md` → Registro da abordagem exploratória e insights
+- `test-cases.md` → Casos de teste executados 
+- `login.cy.js` → Testes automatizados focados no login
+- `banco-dados.cy.js` → Testes automatizados focados na aba de banco de dados
 
 ---
 
