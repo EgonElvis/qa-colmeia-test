@@ -1,3 +1,7 @@
+<p align="center">
+<img width="452" height="154" alt="image" src="https://github.com/user-attachments/assets/61f085ce-7626-45f3-8d20-adefd92bfb8b" />
+</p>
+
 # 🧪 Teste Técnico QA - Colmeia
 
 Este repositório contém os testes realizados como parte do processo seletivo para a vaga de Analista de Testes (QA).
