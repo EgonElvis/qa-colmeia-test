@@ -243,7 +243,6 @@ O modal aparenta permitir dismiss externo sem tratamento do estado do formulári
 <img width="1084" height="947" alt="msedge_2026-04-16_20-01-17" src="https://github.com/user-attachments/assets/4860baba-330c-4acd-ab9a-1507af6028b3" />
 
 
-
 ---
 
 ## ⚠️ BUG010 - Sistema permite cadastro de múltiplos itens com o mesmo nome sem validação de duplicidade
@@ -276,162 +275,175 @@ Não está claro se a duplicidade é permitida por regra de negócio. Na ausênc
 
 ---
 
-## ⚠️ BUG010 - 
+## ⚠️ BUG011 - Sistema permite salvar item com campo obrigatório vazio após múltiplas tentativas
 
-**Severidade:**  Baixa   
-**Prioridade:**  Média   
+**Severidade:** Alta  
+**Prioridade:** Alta  
 
-**Descrição:** 
+**Descrição:**  
+Ao tentar criar um item sem preencher o nome, o sistema inicialmente exibe a mensagem de validação informando que o campo é obrigatório. Porém, ao insistir na ação, o item acaba sendo criado mesmo sem valor válido.
 
 **Passos para reproduzir:**
-1. An  
-2. Is
-3. C 
-4. Qo
+1. Acessar a tela "Bancos de dados"  
+2. Clicar em "Criar"  
+3. Deixar o campo "Nome do item" vazio  
+4. Clicar em "Salvar" repetidas vezes ou insistir na ação  
 
 **Resultado esperado:**  
-1
+O sistema deve bloquear completamente o salvamento enquanto o campo obrigatório estiver vazio  
 
 **Resultado atual:**  
-O 
+Mesmo com a validação exibida, o item acaba sendo criado
 
 **Observação técnica:**  
-O .
+Há inconsistência entre a validação visual e a regra efetiva de persistência, indicando falha na validação do formulário no momento do submit.
 
 **Evidência:**  
-(Adicionar print, video ou link)
+<img width="1084" height="947" alt="msedge_2026-04-16_19-31-33" src="https://github.com/user-attachments/assets/829875e7-1282-4083-a79a-50e5ac21a198" />
+
 
 ---
 
-## ⚠️ BUG010 - 
+## ⚠️ BUG012 - Sistema aceita caracteres especiais sem validação ou regra clara
 
-**Severidade:**  Baixa   
-**Prioridade:**  Média   
+**Severidade:** Média  
+**Prioridade:** Média  
 
-**Descrição:** 
+**Descrição:**  
+A funcionalidade de criação de itens aceita caracteres especiais no nome sem qualquer validação, restrição ou orientação ao usuário.
 
 **Passos para reproduzir:**
-1. An  
-2. Is
-3. C 
-4. Qo
+1. Acessar a tela "Bancos de dados"  
+2. Clicar em "Criar"  
+3. Inserir apenas caracteres especiais no campo  
+4. Clicar em "Salvar"  
 
 **Resultado esperado:**  
-1
+O sistema deve validar o formato aceito para o nome do item ou informar claramente que caracteres especiais são permitidos  
 
 **Resultado atual:**  
-O 
+O sistema aceita caracteres especiais sem qualquer feedback ou restrição
 
 **Observação técnica:**  
-O .
+Na ausência de regra explícita na interface, o comportamento gera ambiguidade de negócio e risco de inconsistência de dados.
 
 **Evidência:**  
-(Adicionar print, video ou link)
+<img width="1084" height="947" alt="msedge_2026-04-16_19-24-34" src="https://github.com/user-attachments/assets/dca18467-905f-46f3-ac55-8e9100156cc6" />
+
 
 ---
 
-## ⚠️ BUG010 - 
+## 🔥 BUG013 - Nome excessivamente longo quebra a exibição da tabela e compromete o layout
 
-**Severidade:**  Baixa   
-**Prioridade:**  Média   
+**Severidade:** Alta  
+**Prioridade:** Alta  
 
-**Descrição:** 
+**Descrição:**  
+Ao cadastrar um item com nome muito longo, a interface não trata adequadamente o conteúdo, causando quebra visual na tabela/listagem.
 
 **Passos para reproduzir:**
-1. An  
-2. Is
-3. C 
-4. Qo
+1. Acessar a tela "Bancos de dados"  
+2. Clicar em "Criar"  
+3. Informar um nome muito extenso  
+4. Clicar em "Salvar"  
 
 **Resultado esperado:**  
-1
+O sistema deve limitar o tamanho do campo ou tratar visualmente o conteúdo longo com quebra adequada, truncamento ou tooltip  
 
 **Resultado atual:**  
-O 
+A listagem exibe o conteúdo de forma descontrolada, quebrando o layout
 
 **Observação técnica:**  
-O .
+Ausência de validação de tamanho máximo e/ou tratamento visual para overflow de conteúdo.
 
 **Evidência:**  
-(Adicionar print, video ou link)
+<img width="1084" height="947" alt="msedge_2026-04-16_19-35-06" src="https://github.com/user-attachments/assets/b1b3d133-a610-4600-b288-8ef5cbccab43" />
+
 
 ---
 
-## ⚠️ BUG010 - 
+## 🔥 BUG014 - Botão de refresh remove todos os itens da listagem
 
-**Severidade:**  Baixa   
-**Prioridade:**  Média   
+**Severidade:** Crítica  
+**Prioridade:** Alta  
 
-**Descrição:** 
+**Descrição:**  
+Ao clicar no botão de refresh da tela "Bancos de dados", todos os itens da listagem são removidos.
 
 **Passos para reproduzir:**
-1. An  
-2. Is
-3. C 
-4. Qo
+1. Acessar a tela "Bancos de dados"  
+2. Criar um ou mais itens  
+3. Clicar no botão de refresh  
 
 **Resultado esperado:**  
-1
+O botão deve apenas recarregar os dados da tela, mantendo os registros existentes  
 
 **Resultado atual:**  
-O 
+Todos os itens desaparecem da listagem
 
 **Observação técnica:**  
-O .
+A ação de refresh aparenta executar comportamento destrutivo ou reset indevido do estado/dados exibidos.
 
 **Evidência:**  
-(Adicionar print, video ou link)
+<img width="1084" height="947" alt="msedge_2026-04-16_19-36-48" src="https://github.com/user-attachments/assets/d11966cc-bb17-41b1-b4b4-7dafaf2fa4e0" />
+
 
 ---
 
-## ⚠️ BUG010 - 
+## 🔥 BUG015 - Arquivar item remove registro da listagem principal, mas não o disponibiliza na visualização de arquivados
 
-**Severidade:**  Baixa   
-**Prioridade:**  Média   
+**Severidade:** Alta  
+**Prioridade:** Alta  
 
-**Descrição:** 
+**Descrição:**  
+Ao arquivar um item, ele deixa de aparecer na listagem principal. Porém, ao acessar a visualização de itens arquivados, nenhum registro é exibido.
 
 **Passos para reproduzir:**
-1. An  
-2. Is
-3. C 
-4. Qo
+1. Acessar a tela "Bancos de dados"  
+2. Criar um item  
+3. Arquivar o item  
+4. Acessar a visualização de arquivados  
 
 **Resultado esperado:**  
-1
+O item deve sair da listagem principal e aparecer corretamente na área de arquivados  
 
 **Resultado atual:**  
-O 
+O item some da listagem principal, mas não aparece na área de arquivados
 
 **Observação técnica:**  
-O .
+Há indício de falha na persistência do status de arquivamento ou na recuperação/renderização dos itens arquivados.
 
 **Evidência:**  
-(Adicionar print, video ou link)
+<img width="1084" height="947" alt="msedge_2026-04-16_19-39-08" src="https://github.com/user-attachments/assets/b9fe0de9-ad44-45e1-9699-5ecb90aa0727" />
+
 
 ---
 
-## ⚠️ BUG010 - 
+## 🔥 BUG016 - Ações diferentes de exclusão apresentam comportamento destrutivo equivalente ao delete
 
-**Severidade:**  Baixa   
-**Prioridade:**  Média   
+**Severidade:** Crítica  
+**Prioridade:** Alta  
 
-**Descrição:** 
+**Descrição:**  
+Foi observado que, embora o botão de deletar funcione, outras ações disponíveis na interface também resultam na remoção do item, reproduzindo comportamento semelhante ao de exclusão.
 
 **Passos para reproduzir:**
-1. An  
-2. Is
-3. C 
-4. Qo
+1. Acessar a tela "Bancos de dados"  
+2. Criar um item  
+3. Executar ações diferentes da exclusão (ex: refresh, arquivar ou outras disponíveis)  
+4. Observar o comportamento do item  
 
 **Resultado esperado:**  
-1
+Cada ação deve executar apenas sua própria função, sem remover indevidamente o item  
 
 **Resultado atual:**  
-O 
+Ações distintas provocam desaparecimento/remoção do item, como se fossem exclusão
 
 **Observação técnica:**  
-O .
+Há forte indício de associação incorreta entre eventos/ações da interface e a mesma lógica destrutiva de remoção de dados.
 
 **Evidência:**  
-(Adicionar print, video ou link)
+<img width="1084" height="947" alt="msedge_2026-04-16_21-46-50" src="https://github.com/user-attachments/assets/bcbf7e78-53bf-4ac1-8cc8-a0ba5ef9a0a1" />
+
+
+
