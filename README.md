@@ -109,3 +109,5 @@ As evidências indicam necessidade de revisão nas regras de negócio, validaç�
 ## 📎 Observação final
 
 Este trabalho foi realizado com foco em demonstrar a abordagem analítica, organização e clareza na comunicação de problemas, além da capacidade de identificar riscos e inconsistências em sistemas web.
+Durante os testes, foram identificados outros comportamentos inconsistentes.  
+Neste repositório foram priorizados os bugs com maior impacto funcional e de experiência do usuário.
