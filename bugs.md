@@ -275,7 +275,7 @@ Não está claro se a duplicidade é permitida por regra de negócio. Na ausênc
 
 ---
 
-## ⚠️ BUG011 - Sistema permite salvar item com campo obrigatório vazio após múltiplas tentativas
+## 🔥 BUG011 - Sistema permite salvar item com campo obrigatório vazio após múltiplas tentativas
 
 **Severidade:** Alta  
 **Prioridade:** Alta  
